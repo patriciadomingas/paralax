@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    font: 16px "Lato", sans-serif;
+    color: #777;
+    height: 100%;
+   
+}
+
+.conteudo{
+    color: #777;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+}
+
+h3{text-transform: uppercase;
+    color: #111;
+    text-align: center;
+    }
+
+h4, h5{color: #111;
+text-align: left;
+margin: 20px;}
+
+p{margin: 50px;
+text-align: justify;
+}
+
+
+
+/* EFEITO PARALAX */
+    .caixa1, .caixa2, .caixa3, .caixa4 {
+        height: 100%;
+        opacity: 0.7;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+
+    }
+
+    .caixa1{
+        background-image: url(imagem1.jpg);
+    }
+
+    .caixa2 {
+        background-image: url(imagem2.jpg);
+    }
+
+    .caixa3 {
+        background-image: url(imagem3.jpg);
+    }
+
+    .caixa4{
+        background-image: url(imagem4.jpg);
+    }
+
+
+/* Centralizando um título no meio do background */
+    .conteudo-titulo{
+        position: absolute;
+        left:0; /*é alinhado a partir da borda esquerda então não fica bem centralizado...Qto maior o texto, menos centralizado*/
+        top:45%;
+        width: 100%;
+        text-align: center; /*aqui ele é alinhado centralizado. não da pra por left:50% pois ele alinha a partir da margem esquerda do elemento. se o conteúdo for grande, não ficará alinhado*/
+        
+    }
+
+    .conteudo-titulo span.titulo{
+        color: #fff;
+        background: #111;
+        padding: 18px;
+        font-size: 20px;
+        letter-spacing: 5px;
+
+    }

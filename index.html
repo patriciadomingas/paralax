@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Paralax</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+       
+</head>
+<body>
+    <div class="caixa1">
+        <div class="conteudo-titulo">
+            <span class="titulo"> EFEITO PARALAX: CENTRALIZANDO O TÍTULO </span>
+            
+
+        </div>
+    </div>
+
+    <div class="conteudo"> 
+       
+        <h4> Centralizando um título no background </h4>
+        <h5>No html</h5>
+
+            <p>
+                div class="caixa1" <br>
+                    div class="conteudo-titulo"<br>
+                        span class="titulo">CONTEÚDO 1 /span<br>
+                                        
+            </p>
+
+        <h5>No CSS</h5>
+            <p>.conteudo-titulo{ <br>
+            position: absolute;<br>
+            left:0; /*é alinhado a partir da borda esquerda então não fica bem centralizado...Qto maior o texto, menos centralizado*/<br>
+            top:45%;<br>
+            width: 100%;<br>
+            text-align: center; /*aqui ele é alinhado centralizado. não da pra por left:50% pois ele alinha a partir da margem esquerda do elemento. se o conteúdo for grande, não ficará alinhado*/<br>
+            }
+
+            </p>
+            <p>
+                .conteudo-titulo span.titulo{<br>
+                    color: #fff;<br>
+                    background: #111;<br>
+                    padding: 18px;<br>
+                    font-size: 20px;<br>
+                    letter-spacing: 5px;<br>
+
+                }
+
+            </p>
+
+        
+
+    </div>
+
+    <div class="caixa2">
+        <div class="conteudo-titulo">
+            <span class="titulo">EFEITO PARALAX</span>
+
+    </div>
+    </div>
+
+    <div class="conteúdo">
+        <h3> PARALAX </h3>
+        <P>
+            É um efeito conseguido utilizando camadas de imagens.<br>
+            Para conseguir o efeito paralax, temos que ter no css BODY e HTML com height: 100%.
+                      
+        </P>
+        <P>
+            Quando colocamos uma borda, vemos que com height 100%, ele ocupa 100% do tamanho da tela do usuário. É o que queremos para ter o efeito paralax. Se não escrevêssemos isso, o body ocuparia o tamanho do conteúdo da página.
+
+
+            Criamos 3 divs no exemplo do professor. A div 1 tem que ter também o height (altura) de 100%. ENTÃO O BODY, HTML E A IMAGEM QUE VAI FICAR POR BAIXO PARADA ENQUANTO SUBIMOS A TELA, TEM QUE ESTAR 100%.
+
+
+            Vamos ter uma formatação padrão para as divs com as imagens no background. As divs com conteúdo chamei de class=”conteúdo” e não participa dessa formação para o efeito paralax. As divs com imagens DEVEM TER HEIGHT 100%. 
+
+            
+
+        </P>
+       
+        <p>
+            A formatação padrão das divs que contém imagem que vai ficar no fundo sendo sobreposta, dando o efeito  paralax é:<br>
+            .caixa1, .caixa2, .caixa3, .caixa4 {<br>
+                border: 1px solid red; (aqui é só para visualizarmos que ocupa toda a tela. depois podemos retirar a borda<br>
+                height: 100%;<br>
+                opacity: 0.7;<br>
+                background-repeat: no-repeat;<br>
+                background-size: cover;<br>
+                background-position: center;<br>
+                background-attachment: fixed;<br>
+
+            }
+
+        </p>
+
+    </div>
+
+    <div class="caixa3">
+        <div class="conteudo-titulo">
+            <span class="titulo">IMAGEM PARA BACKGROUND DO PARALAX</span>
+    </div>
+    </div>
+
+    <div class="conteudo">
+            <p>        A ideia é ter uma imagem que seja grande o suficiente para cobrir a maior parte dos dispositivos.
+            Background-repeat: no-repeat impede que a imagem fique se repetindo. Background-size:cover faz com que a imagem cubra toda a tela. E background-position: center faz com que a imagem esteja sempre centralizada, mesmo quando reduzimos a tela.
+            Background-attachment: fixed é o que faz com que a imagem fique fixa e as demais passem sobre ela. É o que dá o efeito paralax.
+
+            </p>
+
+    </div>
+
+    <div class="caixa4">
+        <div class="conteudo-titulo">
+            <span class="titulo">BONS ESTUDOS!!! </span>
+
+    </div>
+    </div>
+    
+</body>
+</html>
